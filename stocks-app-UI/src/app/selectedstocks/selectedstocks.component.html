@@ -1,0 +1,14 @@
+<div class="row">
+    
+    <div class="column" *ngFor ="let stock of selectedStocks">
+        <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">Stocks</h5>
+                <hr>
+                <p class="card-text">Company : <span>{{stock.title}}</span></p>
+                <p class="card-text">Price : <span>{{stock.price | currency:'INR' }}</span></p> 
+                <button (click)="buyStock(stock)" class="btn btn-primary">Buy Stocks</button>
+            </div>
+        </div>
+    </div>
+</div>
